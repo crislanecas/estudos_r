@@ -1,0 +1,240 @@
+
+---
+title: "02. Estrutura de dados em R | Google Data Analytics"
+output:
+  html_document:
+    toc: true
+---
+
+
+```{r}
+%md
+# Instalando pacotes
+```
+
+
+```{r}
+# Instala os pacotes tidyverse.
+install.packages("tidyverse")
+
+# Carrega a biblioteca do tidyverse.
+library(tidyverse)
+```
+
+
+```{r}
+%md
+# Função c()
+```
+
+
+```{r}
+# Cria um vetor utilizando a função c(), combine.
+vec1 <- c(1, 2, 3, 4, 5)
+vec1
+```
+
+
+```{r}
+# Cria um vetor de números inteiros, é necessário inserir a letra “L” logo após cada número.
+vec2 <- c(1L, 5L, 15L)
+vec2
+```
+
+
+```{r}
+%md
+# Função typeof()
+```
+
+
+```{r}
+# Mostra o tipo do vetor.
+typeof(vec1)
+```
+
+
+```{r}
+%md
+# Função is.logical(), is.double(), is.integer(), is.character()
+```
+
+
+```{r}
+# Verificar se o vetor é do tipo lógico.
+is.logical(vec1)
+```
+
+
+```{r}
+# Verificar se o vetor é do tipo decimal.
+is.double(vec1)
+```
+
+
+```{r}
+# Verificar se o vetor é do tipo inteiro.
+is.integer(vec2)
+```
+
+
+```{r}
+# Verificar se o vetor é do tipo caracter.
+is.character(vec2)
+```
+
+
+```{r}
+%md
+# Função length()
+```
+
+
+```{r}
+ # Mostra o comprimento do vetor, quantos elementos tem armazenado.
+ x <- c(33.5, 57.75, 120.05, 4)
+ length(x)
+```
+
+
+```{r}
+%md
+# Função names()
+```
+
+
+```{r}
+# A função names() atribui novos elementos ao vetor, substituindo os anteriores.
+names(vec1) <- c("a", "b", "c")
+vec1
+```
+
+
+```{r}
+%md
+# Função list()
+```
+
+
+```{r}
+# Cria uma lista com elementos diferentes e atribui os valores a variável.
+lista1 <- list("a", 1L, 1.5, TRUE)
+```
+
+
+```{r}
+# Cria uma lista, dentro de outra lista (lista aninhada) e atribui os valores a variável.
+z <- list(list(list(1 , 3, 5)))
+```
+
+
+```{r}
+# Cria uma lista, com chave e valor e atribui os valores a variável.
+lista2 <- list('Chicago' = 1, 'New York' = 2, 'Los Angeles' = 3)
+```
+
+
+```{r}
+%md
+# Função str()
+```
+
+
+```{r}
+# Mostra os tipos de elementos inclusos em uma lista.
+str(lista1)
+```
+
+
+```{r}
+# Mostra os tipos de elementos inclusos em uma lista.
+# O recuo dos símbolos $ refletem a estrutura aninhada da lista.
+str(z)
+```
+
+
+```{r}
+# Mostra os tipos de elementos inclusos em uma lista.
+str(lista2)
+```
+
+
+```{r}
+%md
+# Função data.frame()
+```
+
+
+```{r}
+# Cria uma dataframe.
+data.frame(x = c(1, 2, 3) , y = c(1.5, 5.5, 7.5))
+```
+
+
+```{r}
+%md
+# Função dir.create()
+```
+
+
+```{r}
+# Criar uma nova pasta, ou diretório, para guardar seus arquivos.
+dir.create ("destination_folder")
+```
+
+
+```{r}
+%md
+# Função file.create()
+Os tipos de arquivo serão, em geral, como .txt, .docx ou .csv. 
+```
+
+
+```{r}
+# Criar um arquivo em branco, insira o nome e o tipo do arquivo a ser criado.
+file.create ("new_csv_file.csv") 
+```
+
+
+```{r}
+%md
+# Função file.copy()
+```
+
+
+```{r}
+# Copiar um arquivo, insira como argumento o nome do arquivo a ser copiado e o nome da pasta de destino na qual o arquivo será copiado. 
+file.copy ("new_csv_file.csv", "destination_folder")
+```
+
+
+```{r}
+%md
+# Função unlink()
+```
+
+
+```{r}
+# Excluir um arquivo.
+unlink ("some_.file.csv")
+```
+
+
+```{r}
+%md
+# Função matrix()
+Especificar o número de linhas ou de colunas nrow = ou ncol = , respectivamente.
+```
+
+
+```{r}
+# Criar uma matriz, por linhas.
+matrix(c(3:8), nrow = 2)
+```
+
+
+```{r}
+# Criar uma matriz, por colunas.
+matrix(c(3:8), ncol = 2)
+```
+
