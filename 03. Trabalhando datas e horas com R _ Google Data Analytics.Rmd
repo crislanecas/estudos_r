@@ -1,0 +1,104 @@
+
+---
+title: "03. Trabalhando datas e horas com R | Google Data Analytics"
+output:
+  html_document:
+    toc: true
+---
+
+
+```{r}
+%md
+# Instalando pacotes
+```
+
+
+```{r}
+# Importa e carrega os pacotes especificados como argumento.
+install.packages("tidyverse")
+library(tidyverse)
+
+# Carrega o pacote lubridate para trabalhar com datas e horas.
+library(lubridate)
+```
+
+
+```{r}
+%md
+# Função today()
+```
+
+
+```{r}
+# Para obter a data atual.
+today()
+```
+
+
+```{r}
+%md
+# Função now()
+```
+
+
+```{r}
+# Para obter a data-hora atual.
+now()
+```
+
+
+```{r}
+%md
+# Função ymd(), dmy(), mdy(), etc
+```
+
+
+```{r}
+# Converte strings em datas e data-hora, no formato padrão aaaa-mm-dd.
+ymd("2021-01-20")
+```
+
+
+```{r}
+mdy("January 20th, 2021")
+```
+
+
+```{r}
+dmy("20-Jan-2021")
+```
+
+
+```{r}
+# Converte números sem aspas no formato padrão aaaa-mm-dd.
+ymd(20210120)
+```
+
+
+```{r}
+%md
+# Função ymd_hms() e suas variações
+```
+
+
+```{r}
+ymd_hms("2021-01-20 20:11:59")
+```
+
+
+```{r}
+mdy_hm("01/20/2021 08:01")
+```
+
+
+```{r}
+%md
+# Função as_date()
+```
+
+
+```{r}
+# Converter data-hora em data no formato padrão aaaa-mm-dd.
+as_date(now())
+```
+
